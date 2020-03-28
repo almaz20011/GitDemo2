@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+ <!-- ***Adding Listeners Class to Grab 'Failure Pictures' from any Class -->
+  <listeners>
+   <listener class-name="Academy.Listeners"/>
+   <!-- ***Passing 'ExtentReporterNG.java' to TestNG.xml File to generate Report  -->
+     <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  
+  <test name="App Testing">
+    <classes>
+      <class name="Academy.AppTest"/>
+     </classes>
+  </test>
+  
+   <test name="Validating title in the Page">
+   <classes>
+      <class name="Academy.ValidateTitle"/>
+    </classes>
+    </test>
+    
+    <test name="Validating User Login">
+    <classes>
+      <class name="Academy.HomePage"/>
+    </classes>
+    </test>
+    
+    <test name="Validating Navigation bar">
+    <classes> 
+      <class name="Academy.ValidateNavBar"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
